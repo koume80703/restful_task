@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  node:
+    build: .
+    volumes:
+      - ${SRC_PATH}:/home
+    container_name: node_env
+    tty: true
+    ports:
+      - 127.0.0.1:8080:8080
