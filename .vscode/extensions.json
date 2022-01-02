@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "christian-kohler.path-intellisense",
+        "oderwat.indent-rainbow",
+        "ms-azuretools.vscode-docker",
+        "streetsidesoftware.code-spell-checker"
+    ]
+}
