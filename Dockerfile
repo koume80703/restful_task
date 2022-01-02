@@ -14,6 +14,3 @@ COPY src/package*.json ./
 
 RUN apt -qq update && apt -qq upgrade -y
 RUN apt -qq install -y nodejs npm redis-server curl
-
-RUN npm install
-
