@@ -1,41 +1,18 @@
 'use strict'
 
 class Student {
-    name; age; grade;
-    constructor(name, age, grade) {
+    constructor(id, name, age, grade) {
+        this.id = id;
         this.name = name;
         this.age = age;
         this.grade = grade;
     }
 
-    update(name, age, grade) {
+    update(id, name, age, grade) {
+        this.id = id;
         this.name = name;
         this.age = age;
         this.grade = grade;
-    }
-
-    set_name(name) {
-        this.name = name;
-    }
-
-    set_age(age) {
-        this.age = age;
-    }
-
-    set_grade(grade) {
-        this.grade = grade;
-    }
-
-    get_name() {
-        return this.name;
-    }
-
-    get_age() {
-        return this.age;
-    }
-
-    get_grade() {
-        return this.grade;
     }
 }
 
