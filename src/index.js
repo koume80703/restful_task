@@ -84,10 +84,10 @@ list_student.push(new Student(0, "taro", 23, "freshman"));
 
 const server = restify.createServer();
 server.use(restify.plugins.bodyParser());
-server.post("/", post_func);
-server.get('/', get_func);
-server.put('/', put_func);
-server.del('/', delete_func);
+server.post("/student", post_func);
+server.get('/student', get_func);
+server.put('/student', put_func);
+server.del('/student', delete_func);
 
 
 server.listen(8080, "0.0.0.0", () => {
