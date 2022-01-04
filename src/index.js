@@ -24,7 +24,13 @@ function post_func(req, res, next) {
     job.on('succeeded', (result) => {
         console.log('done');
         list_student = result.students;
-        res.send(200, { "status": result.status });
+        if (result.status == "done") {
+            res.send(201, { "status": result.status });
+        }
+        else if (result.status == "existed") {
+            res.send(204, { " status": result.status });
+        }
+
         next();
     })
 }
@@ -40,7 +46,13 @@ function put_func(req, res, next) {
     job.on('succeeded', (result) => {
         console.log('done');
         list_student = result.students;
-        res.send(200, { "status": result.status });
+        if (result.status == "done") {
+            res.send(200, { "status": result.status });
+        }
+        else if (result.status == "failed") {
+            res.send(404, { "status": result.status });
+        }
+
         next();
     })
 }
@@ -56,7 +68,13 @@ function delete_func(req, res, next) {
     job.on('succeeded', (result) => {
         console.log('done');
         list_student = result.students;
-        res.send(200, { "status": result.status });
+        if (result.status == "done") {
+            res.send(200, { "status": result.status });
+        }
+        else if (result.status == "Not existed") {
+            res.send(404, { "status": result.status });
+        }
+
         next();
     })
 }
